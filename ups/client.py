@@ -96,7 +96,7 @@ class UPSClient(object):
         # Get the os specific url to deal with windows drive letter
         wsdl_file_url = urllib.pathname2url(wsdl_file_path)
         wsdl_url = urlparse.urljoin('file://', wsdl_file_url)
-        return wsdl_file_path
+        return wsdl_url
 
     def _get_client(self, wsdl):
         wsdl_url = self.wsdlURL(wsdl)

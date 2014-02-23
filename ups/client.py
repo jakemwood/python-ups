@@ -193,7 +193,7 @@ class UPSClient(object):
 
         shipment = self._create_shipment(client, packages, shipper, recipient,
             packaging_type, namespace='ns2')
-        shipment.ShipmentRatingOptions.NegotiatedRatesIndicator = ''
+        shipment.ShipmentRatingOptions.NegotiatedRatesIndicator = 'Yes'
 
         try:
             response = client.service.ProcessRate(Request=request, PickupType=pickup,
